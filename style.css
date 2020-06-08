@@ -1,0 +1,226 @@
+html,body {
+		background-color: #009edb;
+		font-family: Heebo, sans-serif;
+		font-weight: 400;
+		color: #fcfcfc;
+		text-align: center;
+		margin:0;
+		padding:0;
+		height:100vh;
+}
+
+.num-screen {
+	height: 15%;
+	font-size: 3em;
+	font-weight: 700;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15%;
+	margin-bottom: 3%;
+	position: relative;
+	display: block;
+}
+
+.date {
+	height: 15%;
+	font-size: 2em;
+	font-weight: 700;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15%;
+	margin-bottom: 3%;
+	position: relative;
+	display: block;
+}
+
+#img-hand {
+	height: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15%;
+	margin-bottom: 3%;
+	position: relative;
+	display: block;
+}
+
+#img-logo {
+	height: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	position: relative;
+	display: block;
+}
+
+.small-text {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3%;
+	display: block;
+	text-align: justify;
+	text-align-last: center;
+}
+
+.screen {
+	width: 100%;
+	height: 100%;
+}
+
+.button-wrapper {
+		margin-top: 5%;
+}
+.left, .right {
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+button {
+		font-family: Heebo, sans-serif;
+		font-weight: 400;
+		border: none;
+		color: #fcfcfc;
+		border-radius: 15px;
+		padding: 0.2em 0.4em;
+		cursor: pointer;
+		margin-top: 5%;
+		box-shadow: 0 0 10px #999;
+		outline: none;
+}
+.green, .back-green {
+		background-color: #37F321;
+}
+.red, .back-red  {
+		background-color: #F32157;
+}
+.green:hover {
+  background: #74D26A radial-gradient(circle, transparent 1%, #74D26A 1%) center/15000%;
+}
+.red:hover {
+  background: #CA7288 radial-gradient(circle, transparent 1%, #CA7288 1%) center/15000%;
+}
+.green:active {
+  background-color: #A1C89D;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.red:active {
+  background-color: #BDA8AD;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+
+
+.bold {
+	font-weight: 700;
+}
+
+@media (orientation: landscape) {
+	.main {
+		width: 60%;
+		height: 100%;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+	}
+	
+	button {
+		font-size: 1em
+	}
+}
+
+@media (orientation: portrait) {
+	.main {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 3em;
+	}
+	button {
+		font-size: 1em
+	}
+}
+
+
+.ripple-wrap {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  font-size: 0;
+  z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+@-webkit-keyframes RIPPLER {
+  0%   { border-width: 0; }
+  40% { 
+    height: 0;
+    width: 0;
+    border-width: 1500px;
+    margin-top: -1500px;
+    margin-left:-1500px; 
+    border-color: #00B8FF;
+  }
+  100% {
+    border-width: 1500px;
+    height: 2000px;
+    width: 2000px;
+    margin-top: -2500px;
+    margin-left:-2500px;
+    border-color: #00B8FF;
+  }
+}
+@keyframes RIPPLER {
+  0%   { border-width: 0; }
+  40% { 
+    height: 0;
+    width: 0;
+    border-width: 1500px;
+    margin-top: -1500px;
+    margin-left:-1500px; 
+    border-color: #00B8FF;
+  }
+  100% {
+    border-width: 1500px;
+    height: 2000px;
+    width: 2000px;
+    margin-top: -2500px;
+    margin-left:-2500px;
+    border-color: #00B8FF;
+  }
+}
+.ripple {
+  display: block;
+  height: 0;
+  width: 0;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #00B8FF;
+  border-radius: 100%;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  -webkit-animation: none;
+  animation: none;
+}
+.ripple-wrap.goripple {
+  display: block;
+}
+.ripple-wrap.goripple .ripple {
+ -webkit-animation-name: RIPPLER;
+ -webkit-animation-duration: 1.1s;
+ -webkit-animation-fill-mode: forwards;
+ animation-name: RIPPLER;
+ animation-duration: 1.2s;
+ animation-fill-mode: forwards;
+
+}
+.ripple-button {
+  background-position: center;
+  transition: background 0.8s;
+}

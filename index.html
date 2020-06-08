@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="nice_corona.js"></script>
+	<script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+	<title>שאלון בריאות</title>
+</head>
+<body dir="rtl">
+	<div class="main">
+		<div class="screen wrap" id="content-screen">
+			<img src="hand.png" id="img-hand">
+			<span class="bold">מה שלומך היום?</span>
+			<div class="small-text">כדי לשמור על סביבה בריאה, נבקשך להשיב על 3 שאלות יומיות טרם הגעתך למשרד</div>
+			<div class="button-wrapper">
+				<div class="right">
+					<button class="ripple-button green" id="continue1">המשך</button>
+				</div>
+			</div>
+			<img src="nice-logo.png" id="img-logo">
+		</div>
+		<div class="screen" id="screen2" style="display:none">
+			<span class="num-screen">1</span>
+			<div class="small-text">האם היום או במהלך השבוע האחרון חום גופך עלה על 38 מעלות צלזיוס?</div>
+			<div class="button-wrapper">
+				<div class="left">
+					<button class="ripple-button green" id="q1-no">לא</button>
+				</div>
+				<div class="right">
+					<button class="ripple-button red" id="q1-yes">כן</button>
+				</div>
+			</div>
+			<img src="nice-logo.png" id="img-logo">
+		</div>
+		<div class="screen" id="screen3" style="display:none">
+			<span class="num-screen">2</span>
+			<div class="small-text">האם הנך משתעל/ת? (למעט שיעול הנובע ממצב כרוני כגון אסטמה או אלרגיה)</div>
+			<div class="button-wrapper">
+				<div class="left">
+					<button class="ripple-button green" id="q2-no">לא</button>
+				</div>
+				<div class="right">
+					<button class="ripple-button red" id="q2-yes">כן</button>
+				</div>
+			</div>
+			<img src="nice-logo.png" id="img-logo">
+		</div>
+		<div class="screen" id="screen4" style="display:none">
+			<span class="num-screen">3</span>
+			<div class="small-text">האם היית במגע קרוב עם חולה קורונה בשבועיים האחרונים?</div>
+			<div class="button-wrapper">
+				<div class="left">
+					<button class="ripple-button green" id="q3-no">לא</button>
+				</div>
+				<div class="right">
+					<button class="ripple-button red" id="q3-yes">כן</button>
+				</div>
+			</div>
+			<img src="nice-logo.png" id="img-logo">
+		</div>
+		<div class="screen" id="screenyes" style="display:none">
+			<span class="date"></span>
+			<div class="small-text">נא להציג הודעה זו בכניסה למשרד</div>
+			<img src="nice-logo-green.png" id="img-logo">
+		</div>
+		<div class="screen" id="screenno" style="display:none">
+			<span class="date"></span>
+			<div class="small-text">בהתאם להצהרתך, נבקש לעדכן את מנהלך<span style="font-weight:700;">&nbsp;ולא להגיע למשרד</span>, וכן לפנות לרופא לצורך בדיקת קורונה</div>
+			<img src="nice-logo-red.png" id="img-logo">
+		</div>
+		<div class="ripple-wrap"><div class="ripple">
+	</div>
+</body>
+</html>
