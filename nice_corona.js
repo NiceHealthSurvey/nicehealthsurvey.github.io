@@ -48,7 +48,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
   });
-  
+  sick = 0;
 	q1 = -1;
   $('body').on('click', '#q1-yes', function(e) {
     rippler.css('left', e.clientX + 'px');
@@ -56,6 +56,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
     e.preventDefault();
     finish = false;
 	q1 = 1;
+	  sick = 1;
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
   });
@@ -76,6 +77,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
     e.preventDefault();
     finish = false;
 	q2 = 1;
+	  sick = 1;
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
   });
@@ -96,6 +98,16 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
     e.preventDefault();
     finish = false;
 	q3 = 1;
+	  sick = 1;
+	  frm = new FormData();
+	  frm.append('Timestamp', (new Date()).toString()));
+	  frm.append('Fever', q1);
+	  frm.append('Cough', q2);
+	  frm.append('Contact', q3);
+	  frm.append('Sick', sick);
+    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message));
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
 	
@@ -108,6 +120,15 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
     e.preventDefault();
     finish = false;
 	q3 = 0;
+	  frm = new FormData();
+	  frm.append('Timestamp', (new Date()).toString()));
+	  frm.append('Fever', q1);
+	  frm.append('Cough', q2);
+	  frm.append('Contact', q3);
+	  frm.append('Sick', sick);
+    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message));
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
   });
@@ -129,7 +150,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 			  $('#content-screen').html(screen4);
 		  break;
 		  case 4:
-			if ((1-q1)* (1-q2)* (1-q3) == 0) {
+			if (sick == 1) {
 			  $('#content-screen').html(screenno);
 			  $('body').addClass("back-red");
 			} else {
