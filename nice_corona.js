@@ -105,7 +105,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 	  frm.append('Cough', q2);
 	  frm.append('Contact', q3);
 	  frm.append('Sick', sick);
-    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: })
+    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: frm})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message));
     ripple_wrap.addClass('goripple');
@@ -126,7 +126,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 	  frm.append('Cough', q2);
 	  frm.append('Contact', q3);
 	  frm.append('Sick', sick);
-    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: })
+    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: frm})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message));
     ripple_wrap.addClass('goripple');
