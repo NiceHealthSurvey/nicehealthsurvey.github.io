@@ -85,7 +85,7 @@ button {
 		padding: 0.2em 0.4em;
 		cursor: pointer;
 		margin-top: 5%;
-		box-shadow: 0 0 10px #f7f7f7;
+		box-shadow: 0 0 4px #ccf0ff;
 		outline: none;
 }
 .green, .back-green {
