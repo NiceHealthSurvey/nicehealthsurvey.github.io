@@ -95,10 +95,10 @@ button {
 		background-color: #009eda;
 }
 .green:hover {
-  background: #74D26A radial-gradient(circle, transparent 1%, #74D26A 1%) center/15000%;
+  background: #4dccff radial-gradient(circle, transparent 1%, #4dccff 1%) center/15000%;
 }
 .red:hover {
-  background: #CA7288 radial-gradient(circle, transparent 1%, #CA7288 1%) center/15000%;
+  background: #4dccff radial-gradient(circle, transparent 1%, #4dccff 1%) center/15000%;
 }
 .green:active {
   background-color: #009eda;
@@ -129,7 +129,7 @@ button {
 	}
 	
 	button {
-		font-size: 1em
+		font-size: 2em
 	}
 }
 
@@ -143,7 +143,7 @@ button {
 		font-size: 3em;
 	}
 	button {
-		font-size: 1em
+		font-size: 2em
 	}
 }
 
