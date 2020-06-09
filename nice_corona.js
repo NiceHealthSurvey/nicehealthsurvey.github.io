@@ -148,6 +148,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 		  case 3:
 			current_screen = 4;
 			  $('#content-screen').html(screen4);
+			 
 		  break;
 		  case 4:
 			if (sick == 1) {
@@ -162,7 +163,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 	  }
       setTimeout(function() {
         finish = true;
-      },10);
+      },100);
   }
   
 });
