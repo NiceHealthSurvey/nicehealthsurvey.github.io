@@ -161,9 +161,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 		  default:
 		  break;
 	  }
-      setTimeout(function() {
         finish = true;
-      },10);
   }
   
 });
