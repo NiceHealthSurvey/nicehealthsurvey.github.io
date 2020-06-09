@@ -90,9 +90,11 @@ button {
 }
 .green {
 		background-color: #0080b3;
+	min-width: 2em;
 }
 .red  {
 		background-color: #0080b3;
+	min-width: 2em;
 }
 
 .back-green {
