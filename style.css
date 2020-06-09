@@ -89,10 +89,10 @@ button {
 		outline: none;
 }
 .green, .back-green {
-		background-color: #37F321;
+		background-color: #009eda;
 }
 .red, .back-red  {
-		background-color: #F32157;
+		background-color: #009eda;
 }
 .green:hover {
   background: #74D26A radial-gradient(circle, transparent 1%, #74D26A 1%) center/15000%;
@@ -101,13 +101,13 @@ button {
   background: #CA7288 radial-gradient(circle, transparent 1%, #CA7288 1%) center/15000%;
 }
 .green:active {
-  background-color: #A1C89D;
+  background-color: #009eda;
   background-size: 100%;
   transition: background 0s;
 }
 
 .red:active {
-  background-color: #BDA8AD;
+  background-color: #009eda;
   background-size: 100%;
   transition: background 0s;
 }
