@@ -88,11 +88,18 @@ button {
 		box-shadow: 0 0 4px #ccf0ff;
 		outline: none;
 }
-.green, .back-green {
+.green {
 		background-color: #0080b3;
 }
-.red, .back-red  {
+.red  {
 		background-color: #0080b3;
+}
+
+.back-green {
+		background-color: #37F321;
+}
+.back-red  {
+		background-color: #F32157;
 }
 .green:hover {
   background: #4dccff radial-gradient(circle, transparent 1%, #4dccff 1%) center/15000%;
