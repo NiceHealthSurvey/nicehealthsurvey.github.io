@@ -163,7 +163,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 	  }
       setTimeout(function() {
         finish = true;
-      },100);
+      },10);
   }
   
 });
