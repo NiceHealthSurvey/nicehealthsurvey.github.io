@@ -1,3 +1,5 @@
+import 'whatwg-fetch'
+
 $(document).ready(function() {
   var ripple_wrap = $('.ripple-wrap'),
       rippler = $('.ripple'),
