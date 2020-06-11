@@ -35,7 +35,6 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
   screenno = $('#screenno').html();
   $('#screenno').remove();
   
-  
   rippler.bind("webkitAnimationEnd oAnimationEnd msAnimationEnd mozAnimationEnd animationend", function(e){
     ripple_wrap.removeClass('goripple');
   });
