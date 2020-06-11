@@ -1,5 +1,3 @@
-import 'whatwg-fetch'
-
 $(document).ready(function() {
   var ripple_wrap = $('.ripple-wrap'),
       rippler = $('.ripple'),
@@ -106,7 +104,9 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 	  frm.append('Cough', q2);
 	  frm.append('Contact', q3);
 	  frm.append('Sick', sick);
-    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: frm});
+	req = new XMLHttpRequest();
+	  req.open("POST", 'https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec');
+	  req.send(frm);
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
 	
@@ -125,7 +125,9 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 	  frm.append('Cough', q2);
 	  frm.append('Contact', q3);
 	  frm.append('Sick', sick);
-    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: frm});
+	  req = new XMLHttpRequest();
+	  req.open("POST", 'https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec');
+	  req.send(frm);
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
   });
