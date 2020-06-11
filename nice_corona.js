@@ -104,9 +104,7 @@ $('.date').html(dd + '/' + mm + '/' + yyyy);
 	  frm.append('Cough', q2);
 	  frm.append('Contact', q3);
 	  frm.append('Sick', sick);
-    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: frm})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message));
+    fetch('https://script.google.com/macros/s/AKfycbzdC6iPblVhO3AKdy66YGPgb4u3klFzyodaDIogNBWeczkBtUs/exec', { method: 'POST', body: frm});
     ripple_wrap.addClass('goripple');
     window.requestAnimationFrame(function() {monitor(rippler[0])});
 	
